@@ -1,0 +1,9 @@
+#Environment Variables
+
+PATH => Search for the Path
+BASH_ENV => bashrc path
+HOME => Home directory
+PWD => Present working directory
+SHELL => login shell
+USER => Username
+LOGNAME => USERNAME
