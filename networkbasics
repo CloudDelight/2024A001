@@ -21,7 +21,52 @@ Ensuring Confidentiality
 Maintaining Communication integrity
 Ensuring availability
 
+Network Representation
+
+Network Interface Card (NIC)
+Physical Port
+Interface
+
 5. What are Protocols
+
+Rules that govern communication
+Format or structure of msgs
+Method by which it sent
+How and when error occurs
+setup and termination - Data trasfer
 6. Network Protocols
+
+
 7. Interaction of Protocols
+
+Application Protocols
+HTTP (Hypertext transfer protocol) / HTTPS
+
+Server --> Client  --> Interaction
+Amazon.in 
+Locol machine web page(Client) ----> Amazon Server (Server)
+
+Transport Protocol
+TCP (Transmission control Protocol)
+
+Source
+Destination
+
+Sending message --> Source (Server/User) --> Over the network --> Destination(Server/User) 
+User -> 10KB -> Destination User -> 10KB
+10KB -> 1KB (10 packets) --> Merge back the 1KB to 10KB
+
+Destination user --> message saying that he/she has recieved the msg - Acknowledgement
+10packets --> 6 packets (destination)
+4 packets are not recieved
+
+UDP - User Datagram Protocol - Acknowledgement will be given
+
+Internetwork Protocol
+IP (Internet protocol)
+
+Models of Network
+
+1. TCP/IP Model
+2. OSI ModeL
 
