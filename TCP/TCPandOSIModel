@@ -1,0 +1,18 @@
+TCP/IP Model
+
+1. This defines the category of functions that must occur for communication to be successfull
+2. Open standard - Discussed in public forums and documents in as RFCs - Requests for Communication
+3. RFCs contain - Formal specification of data communication protocols and resources that 
+describe the use of the protocols
+
+4. Communication Process
+
+Steps
+1. Creation of data at the application layer of the originating source end devices
+2. Segmentation and encapsulation of data as it passes down the protocol stack on th source end device
+3. Generation of data on to the media at Network Access layer of the stack
+4. Transportation of data using intermediate devices
+5. Reception of data at Network Access layer of the destination end devices
+6. Decapsulation and reassemble of data at destination end device
+7. Passing this data to the destination application at application layer of the destination end devices.
+
