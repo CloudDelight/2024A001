@@ -1,0 +1,12 @@
+TYpes of addresses in IPv4
+
+1. Network address
+2. Braodcast address - Allows communication to all the hosts in the network
+3. Host address
+
+Types of communication
+
+1. unicast - sending packets from one host to individual host
+2. Braod cast - sending packets from one host to all the hosts in the network
+3. Multicast - sending packets from one host to selected group of hosts
+
