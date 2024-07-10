@@ -1,0 +1,42 @@
+TCP Connection establishment steps
+
+1. The initiating client sents Segment containing an initial sequence value which server as a request to the server 
+to begin a communication session
+
+2. Server sends a segment conatining acknowledgement value equal to the recieved sequence value plus 1, also its own 
+synchronising sequence number. This value is always one greater than the sequence number as ACK is always the next 
+expected Byte/Octet.
+This ACK value enables client to tiethe response backto the original segment that it sends to the server
+
+3.Initiating client responds with an ACK value equal to the sequence valueit recieved plus 1.
+
+This completes the process of establishing the connection.
+
+TCP Segment header values (Flag sets)
+1. URG - Urgent Pointer Field significant
+2. ACK - Acknowledgement feild significant
+3. PSH - Push Functions
+4. RST - Reset the connection
+5. SYN - Syncchronize sequence number
+6. FIN - No More Data from sender
+
+TCP Three way hand shake
+
+Client --> SYN (seq = m) --> Server Recieves SYN (Recieves SYN seq = m)
+
+Server send SYN and ACK --> SYN (seq = n) + ACK (ack = m+1) --> Client recieves ACK (Recieved seq = n and ack = m+1)
+
+Client sends ACK --> ACK (n+1) ---> Server reqcieves ACK (n+1)
+
+
+TCP Session Termination Steps
+
+1. When the client has no more data to send in the stream it send a segment with the FIN flag set.
+2. The server sends ACK to acknowledge the reciept of the FIN to terminate the session from client to server
+3. The server sends FIN to the cleint to terminate server to client session
+4. The client responds with an ACK to acknowledge the FIN from the server
+
+
+
+
+
