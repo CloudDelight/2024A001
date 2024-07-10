@@ -10,3 +10,33 @@ Types of communication
 2. Braod cast - sending packets from one host to all the hosts in the network
 3. Multicast - sending packets from one host to selected group of hosts
 
+1. Decimal to Binary conversion
+2. Binary to decimal conversion
+
+245.176.98.43
+
+
+
+
+11110101 . 11001010 . 00110011 . 00010110
+
+176.16.4.20
+
+10110000 . 00010000 . 00000100 . 00010100
+
+1*2>7 + 0*2>6 + 1*2>5 + 1*2>4 + 0*2>3 + 0*2>2 + 0*2>1 + 0*2>0
+
+128+0+32+16+0+0+0+0 = 176
+
+
+00110011 = 51
+
+00010100 = 4+16 = 20
+
+
+
+
+
+
+
+
