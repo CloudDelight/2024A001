@@ -1,0 +1,28 @@
+Transport Layer
+
+This uses four basic processes
+
+1. Addressing
+2. Encapsulation
+3. Routing
+4. Decapsulation
+
+Network Layer Protocols
+1. IPv4
+2. IPv6
+
+IPv4 Characteristics
+
+1. Connectionless - No Connection is established before sending the data packets
+    Example: Sending a letter to someone without notifying the recipient
+    Since IP is connectionless it requires no initial exchange of control information
+    Packets arrive at destination in sequence.
+
+IPv4 Packet Headers
+
+1. IP Source Address
+2. IP Destination Address
+3. Time-To-Live (TTL)
+4. Type-of-Service (ToS)
+5. Protocol
+6. Fragment offset
