@@ -15,3 +15,58 @@ Steps
 5. Reception of data at Network Access layer of the destination end devices
 6. Decapsulation and reassemble of data at destination end device
 7. Passing this data to the destination application at application layer of the destination end devices.
+
+
+Protocol Data units
+
+1. Data - General termionology at application  layer
+2. Segment - PDU at transport layer
+3. Packet - PDU for internetwork Layer
+4. Frame - Network Access layer PDU
+5. Bits - Physical transmission of data
+
+
+Application Layer - Data creation
+Presentation Layer - Encryption and decryption, Commpression of date , Conversioon of data and present to presentation layer
+Session layer
+1. Session to be created for an application
+2. DNS - Domain Naming server protocol
+3. http - Hypertext transfer protocol
+4. SMTP - Simple mail Transfer Protocol
+
+SSH - 22 
+RDP - 3389
+DNS - 53 (UDP/TCP)
+HTTP - 80 (TCP)
+HTTPS - 443 (TCP)
+SMTP - 25 (TCP)
+Telnet - 23 (TCP)
+FTP - 20 and 21 (TCP)
+DHCP - 67 and 68 (UDP)
+
+DNS - Domain Naming Service
+
+A record - end device address
+NS Record - Name server - Authoritative server
+SOA - Start of authority
+CNAME - FQDNs - Fully qualified Domain Names coverted to IP address or vice versa
+MX records - Mail exchange records
+
+Example:
+amazon.in - Domain Name
+.in - top level domain
+.co
+.com
+.au
+.jp
+.org
+
+
+Port Addressing
+
+IANA - Internet assigned Numbers Authority
+
+Well Known Ports - (Numbers 0 to 1023) - SMTP
+Registered Ports - (Number 1024 to 49151)
+Private Ports - (Number 49152 to 65535) - Client applications
+
