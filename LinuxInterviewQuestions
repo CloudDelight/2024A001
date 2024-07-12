@@ -1,0 +1,125 @@
+1. Name some Flovours of linux.
+2. What are the file permissions in Linux?
+3. How do u mount volume in linux?
+4. Difference between temporary mounting and permanent mounting.
+5. Commands to check
+
+a. disk space
+b. cpu utilization
+c. Memory utilization
+d. available disks/volumes in the OS
+e. How long system is up and running without reboot.
+f. the directory in which you are in
+g. user who has logged in
+h. list of files and directories
+i. list of files and directories along with hidden files
+
+6. Difference between absolute path and relative path.
+7. How to check the all the running processes?
+8. How to check a specific process?
+9. How do u kill a specific process?
+10. How do u set execute permissions to the file?
+11. How do u set rw permission to group only?
+12. How do u create user in linux?
+13. How do u assign password to the user?
+14. Files that gets modified when user is added?
+15. what is the path of config files that useradd ccommend refers and what are its significance?
+16. How do u create a directory?
+17. How to create empty file?
+18. Display the date in mm/dd/yy format, display only day of the month
+19. How do i restrict a particular folder with specific permissions to all gthe files which gets created inside?
+20. copying the file, removing the file
+21. Display the number of lines in a file?
+22. List first 10 lines and last 10 lines of a file?
+23. list the content of a file only one page at a time
+24. Use of nohup
+25. what is foreground and background process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Answers
+
+1. Ubuntu
+Debian
+CentOS
+Fedora
+RedHat
+
+2. Read: Users open and read files with this permission.
+Write: Users can open and modify the files.
+Execute: Users can run the file.
+
+3. Document shared
+
+4. Temporary mounting - uses mount command and post reboot the file system will not be availbel for use i.e, in df -h
+permanent mounting - fstab entry
+
+5
+a. df -h
+b. top
+c. top/ free -m
+d. fdisk -l
+e. uptime
+f. pwd
+g. who
+h. ls -lrth
+i. ls -larth
+
+6. Absolute path is mentioning the path of file/directory from root
+Relative path is mentioning the path leaving the pwd
+
+7. ps
+8. ps -ef |grep <process name>
+9. Kill -9 <PID>
+10. chmod +x <file>
+11. chmod 060 <file/folder>
+12. useradd <username>
+13. passwd <password>
+14. 
+/etc/passwd
+/etc/shadow
+/etc/group
+15.
+/etc/default/useradd
+/etc/login.defs
+16. mkdir <dirname>
+17. touch <filename>
+18. date +%D , date +%d
+19. umask
+20. cp , rm
+21. wc
+22. head , tail
+23. more , less
+24. lets the proceses to continue even after logout
+25. Foreground runs in the session, background process in background letting user to do more than one task
+
+
+
+
+
+
