@@ -13,6 +13,18 @@ Types of communication
 1. Decimal to Binary conversion
 2. Binary to decimal conversion
 
+65.34.23.24
+
+01000001 . 00010111 . 00111000 . 01100011
+
+01100011 -    0*2>7 + 1*2>6 +1*2>5 + 0*2>4 + 0*2>3 + 0*2>2 + 1*2>1 + 1*2>0
+
+0 + 64 + 32 + 0 + 0 + 0 + 2 + 1 = 99
+
+
+
+
+
 245.176.98.43
 
 
@@ -45,6 +57,38 @@ Class B - 128.0.0.0/16 - 191.255.0.0/16 - 128-191
 Class C - 192.0.0.0/16 - 223.255.255.0/16 - 192-223
 
 
+VPC - Private network u choosing - Public subnet, Private subnets, on prem connectivities , Define our own IP address
+
+Discovery questions
+1. On which cloud?
+2. What is the type of application? Ans - E-commerce/Healthcare/Hospitality
+3. Based on the type of application - build the questions
+4. What is existing setup - on premises /AWS cloud/azure/google cloiud - Ans - On premises
+5. Networking connectivity from aws cloud and On premises - move/copy the data from on prem to cloud
+       Direct connect
+       Site to site VPN
+6. Who are the targetted audience - Location, Number of visitors to gthe appliocation, Data flows into the application
+
+Number of vistors and data flows in the application
+
+Webserver --> Application servers --> Database servers
+1+2(r5.2xlarge) 8vCPU and 16GB RAM +1 multiAZ/Active active DB/Active Passive/Active+ReadOnlys/Active replicas
+
+Decide the number of IP addresses that are required for an application with a network
+
+1. How many servers
+2. How many environments ( Dev, Preprod, Performance, QA, Production)
+100 IPs
+3. Keep buffer IPs also - 250
+
+Classless interdomain range - CIDRs
+
+Reuse the IPs ranges - Condition is
+1. it operates independently
+2. There is no com munication between two env with same IP range
+
+
+
 
 E COMMERCE website
 Three tier architecture
@@ -70,6 +114,38 @@ Each octect maximum numner used - 255
 0.0.0.1 --> 0.0.0.2 --> 0.0.0.3 ---------> 0.0.0.255 --> 0.0.1.0 ----->0.0.1.255 --> 0.0.2.0 --> 0.0.255.0
 
 172.16.43.90/32
+172.16.0.0/16
+
+11111111.11111111.00000000.0000000
+
+32-16 = 16
+
+Formula = 2 to pwer of 16 = 65536
+
+First IP in the range = 172.16.0.0
+Lasty IP in the range = 172.16.255.255
+Firast usable IP  = 172.16.0.1
+last usable IP = 172.16.255.254
+No of hosts = 2 power 16 - 2 = 65536-2 = 65534
+
+
+
+192.168.0.0/25
+
+32 - 25 = 7
+
+First IP in the range = 192.168.0.0
+Lasty IP in the range = 192.168.255.255
+Firast usable IP  = 192.168.0.1
+last usable IP = 192.168.0.127
+No of hosts = 2 power 7 -2 = 128 -2 = 126
+
+
+
+
+
+172.16.0.0
+172.16.0.1 - 172.16.0.2 ------ 172.16.0.255 -- 172.16.1.0----172.16.1.255
 
 
 11111111 . 11111111 . 11111111 . 11111111
