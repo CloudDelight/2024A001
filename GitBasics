@@ -1,0 +1,38 @@
+--> What is git hub
+
+GitHub is an online software development platform. 
+It's used for storing, tracking, and collaborating on software projects.
+
+--> What is Git
+
+Git is open-source version control software, used for managing and tracking file revisions. 
+You can use Git with any file type, but it’s most often used for tracking code files.
+
+--> What is Version control 
+
+Advanced version control is necessary for software projects, especially collaborative ones.
+
+
+--> Commands
+
+git --version
+which git
+git init
+git status
+git add .
+git add <filename>
+git commit -m "Initial commit"
+git clone https://github.com/username/projectname.git
+
+--> To specify a different name of the directory, e.g. MyFolder:
+git clone https://github.com/username/projectname.git MyFolder
+
+--> Or to clone in the current directory:
+git clone https://github.com/username/projectname.git .
+
+git push --set-upstream origin master
+
+--> Setting your user name and email
+git config --global user.name "Your Name"
+git config --global user.email mail@example.com
+
