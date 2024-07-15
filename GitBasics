@@ -30,9 +30,42 @@ git clone https://github.com/username/projectname.git MyFolder
 --> Or to clone in the current directory:
 git clone https://github.com/username/projectname.git .
 
-git push --set-upstream origin master
+
+
+git push --set-upstream origin main
+git push --set-upstream origin development
 
 --> Setting your user name and email
 git config --global user.name "Your Name"
 git config --global user.email mail@example.com
 
+
+
+Branching Strategy
+
+One single application
+3 environments - three tier architecture
+
+Dev, QA, Production
+
+Dev - Application server - m5.xlarge - 5 app servers
+      Webserver - Load balancer
+      DB Server - RDS - db.m5.2xlarge - Single AZ deployment
+
+QA - Application server - m5.xlarge - 5 app servers
+      Webserver - Load balancer
+      DB Server - RDS - db.m5.2xlarge - Single AZ deployment
+
+Production - Application server - m5.8xlarge - 10 app servers
+      Webserver - Load balancer
+      DB Server - RDS - db.m5.8xlarge - Multi AZ deployment
+
+Pipeline - Deployment strategy - Dev -> QA -> Production 
+
+no option Dev --> production 
+
+Branches
+
+Development
+QA
+Production 
