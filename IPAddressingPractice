@@ -13,7 +13,23 @@ Types of communication
 1. Decimal to Binary conversion
 2. Binary to decimal conversion
 
+122.171.21.48
+
+01111010.10101011.00001011.01011000
+
+
+01011000 
+
+0*2>7 + 1*2>6 + 0*2>5 + 1*2>4 + 1*2>3 + 02>2 + 02>1 + 02>0
+
+0+64+0+16+8+0+0+0 = 88
+
+
+
+
 65.34.23.24
+
+
 
 01000001 . 00010111 . 00111000 . 01100011
 
@@ -55,6 +71,16 @@ Private IP addresses
 Class A - 0.0.0.0/8 to 127.0.0.0/8 - 0-127
 Class B - 128.0.0.0/16 - 191.255.0.0/16 - 128-191
 Class C - 192.0.0.0/16 - 223.255.255.0/16 - 192-223
+
+
+Reusaing of Private IPs
+
+1. You can reuse it in different regions/Accounts
+2. When u use the IP range in N.virginia and same IP range u have used in Mumbai - These two networks are operating 
+individually. there is no communication  between these two network <nv, m>
+3. If there is a communication u shud never use the same IP address range - IP Conflict
+4. On premises 
+use case - Migration projcet - moving the entire stack from on prem to AWS
 
 
 VPC - Private network u choosing - Public subnet, Private subnets, on prem connectivities , Define our own IP address
@@ -114,6 +140,44 @@ Each octect maximum numner used - 255
 0.0.0.1 --> 0.0.0.2 --> 0.0.0.3 ---------> 0.0.0.255 --> 0.0.1.0 ----->0.0.1.255 --> 0.0.2.0 --> 0.0.255.0
 
 172.16.43.90/32
+
+
+10110000 . 00010000 . 00000100 . 00010100
+
+00
+11
+10
+01
+
+
+172.16.43.90/31
+
+172.16.43.90/30
+
+172.16.43.90/29
+
+32 - 29 = 3 (n)
+
+2 power n - 2 = 8 - 2 = 6
+
+/14
+
+32 - 14 = 18
+
+2 power 18 - 2 = 262142
+
+
+
+10.0.0.0/16
+
+
+
+
+
+
+
+
+
 172.16.0.0/16
 
 11111111.11111111.00000000.0000000
