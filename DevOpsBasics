@@ -1,0 +1,168 @@
+Three tier Architecture
+
+Webservers --> Application server --> Database
+
+Environment - Architecture
+
+Development env
+Test/QA Env
+Preprod/Stage env
+Performance env
+Production Env
+
+Factors to be considered to decide on no. of env
+
+1. How many developers
+2. Whether this has to be tested before going live
+3. Application - user based app, how many users, how many app servers - system is performing properly  
+4. Cost specific - u need cut the no of environments
+
+startegy 2 - easy operations
+dev and QA - SAME ACCOUNT
+stage and perf - same account
+production - another account
+
+Strategy 3 - cost efficient
+Dev and QA - one environment
+Stage and perv - one en
+prod - single
+
+Strategy 1 - happy path
+individual account individual env
+
+option 1 
+sepearate out the Environmnets in to different account
+
+Option 2
+one account - two environment
+
+create seperate VPCs - seggregating gthe env using the network
+
+
+High Availability
+1. Availability Zone
+2. Auto scaling
+3. Load balancer
+
+Fault tolerance
+1. Load balancer
+
+security
+1. Security groups - Instance level
+2. Network access control list (NACLs) - Subnet level
+3. NAT 
+4. Guard duty
+5. Security Hub
+6. IAM
+7. WAF
+8. Secrets manager
+
+Monitoring
+1. cloud watch
+
+third party 
+1. Data DOG
+2. Splunk
+3. Grafana
+4. Prometheus
+5. Pager Duty
+6. Netcool - to be checked
+
+Logging
+1. Cloudwatch logs
+
+Access management
+1. IAM
+
+Disaster recovery
+
+Cost management
+1. Based on the scenario - FinOPs
+
+Operational excellance
+1. Discuss on use cases
+
+Networking
+1. VPC
+2. Subnets etc
+
+DevOps
+
+1. Application code - Python, Java, GO, C++ , Dotnet --> developer --> vs code and check for syntax
+
+Application
+Domain --> something.com --> Domain mapping to a server/managed service to roite the traffic --> Domain --> Network
+--> VPC --> Public Subnet --> Public route table --> 0.0.0.0/0 rule--> Webserver --> ALB --> Target groups --> path
+based mapping/ IP rule mapping --> something.com/fashion --> Private subnet --> Application servers --> pick the 
+traffic --> fectch the details from DB --> Send back the request details to end user
+
+Application code
+
+2. Infrastructure code
+
+Domain creation
+Loadbalncers - Target groups, path based routing rule
+VPC , subnets, rtb, sG, NACLS
+Servers - application
+DB - Backup and retention
+
+Cloud Formation - Native to AWS
+
+Terraform - infrastructure as a code tool - AWS, Azure, GCP, Alibaba
+
+Dev, QA, Stage , perf and production
+
+Dev - 1 LB, 3 APP servers (m5.8xlarge) , 1 DB
+QA - 1 LB, 3 App server, 1 DB
+Stage - 1 LB, 5 APP server, 2 DB , 1 active DB and replicca
+Perf - 1 LB , 10 App server, 2 DB multi AZ deployment
+Production -  1 LB , 10 App server(m5.8xlarge), 2 DB multi AZ deployment
+
+lb
+app server
+DB code
+
+Dev - change the numbers - number, configuration - modify
+qa
+
+Adv - 
+reuasable code
+
+Run the terraform code - deployment the services (EC2, DB etc) - Status - db.m5.large
+Engineer - login to console - he modifies the DB instance type - manually - db.m5.2xlarge
+
+Drift
+
+Drift managemnet - Terraform code is run - saves all the created logs in a file called state file
+re run the terraform - drifted it has roll back - roll back
+
+terrfaorm run 1 - it has created db.m5.large - state file 
+step 2 - enginner logged into console - db.m5.2xlarge
+terraform run 2 - drift ion db instance 
+
+Terraform
+
+file extension - example.tf
+Terraform operates in a particular folder - /root/Downlaods/example
+dependency mapping - 
+
+subnet, NACLs, Server, LB, Auto scaling, Target groups, VPC
+
+VPC, Subnet, NACLs, LB, Target groups, servers, ASG
+
+vpc.tf
+subnet.tf --> mapping vpc 
+NACL 
+
+Statefile - default - local path from you are running etrraform code
+Push to S3
+
+
+
+
+
+
+
+
+
+
