@@ -7,6 +7,27 @@ Providers enable Terraform to work with virtually any platform or service with a
 
 The core Terraform workflow consists of three stages:
 
+folder created for terraform files(.tf) --> place terraform code 
+
+
+# terraform init 
+
+providers.tf - to carry the provider information - AWS, Azure, GCP, Alibaba
+
+local machine will download all the required binaries for aws for further action
+
+# terraform plan
+
+set of code example - ec2 - 6, load balancer, rds
+syntax
+blueprint of what it will create
+
+# terraform apply
+
+actually creates the resources
+
+
+
 Write: You define resources, which may be across multiple cloud providers and services. 
 For example, you might create a configuration to deploy an application on virtual machines 
 in a Virtual Private Cloud (VPC) network with security groups and a load balancer.
@@ -41,6 +62,15 @@ another separate Terraform configuration, or modified by functions.
 Modules
 https://developer.hashicorp.com/terraform/language/modules
 
+module "aws_instance" "web" {
+  ami           = "var.instance_ami"
+  instance_type = "t2.micro"
+}
+
+variables.tf
+
+instance_ami = "MIBKJSKJS"
+
 BACKEND
 
 terraform {
@@ -51,3 +81,20 @@ terraform {
   }
 }
 
+
+Terraform file types include:
+
+main.tf – 
+containing the resource blocks that define the resources to be created in the target cloud platform.
+
+variables.tf – 
+containing the variable declarations used in the resource blocks.
+
+provider.tf – 
+containing the terraform block, s3 backend definition, provider configurations, and aliases.
+
+output.tf – 
+containing the output that needs to be generated on successful completion of “apply” operation.
+
+*.tfvars – 
+containing the environment-specific default values of variables.
