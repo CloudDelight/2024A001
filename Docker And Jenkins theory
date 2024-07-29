@@ -1,0 +1,44 @@
+Jenkins - CI and CD configuration
+
+Deployment of jenkins 
+
+  
+  EC2instance
+Java/python/tomcat etc
+  
+  EC2 instance - 4 vcpu 16GB RAM
+Amazon Linux
+  Docker - use part of OS reszources to run an application 
+  Java - 1vcpu, 4GB RAM - port no 8080
+  Python - 1vcpu , 8GB RAM - port no 8081
+  Tomcat - 2vcpu, 4GB RAM - port no 8082
+
+Docker Images
+
+    Prebuilt/ Custom build  - write own code for image building
+    Dockerhub - images
+
+docker ps
+    list all the process which is deployed as docker containers - running containers
+docker ps -a
+    list all the process which is deployed as docker containers - running containers and stopped conatiners
+docker pull imagename
+
+
+Jenkins
+
+    1. Plugins - Installables - Jenkins to operate - 
+    Example - Pipeline - creating EC2 instance via terraform
+
+    AWS - Deployment
+    Terraform
+    Github/CodeCommit
+
+    Trigger example
+
+    1. Code commit - if there are any push that happens to a partticulr repository - Initiate Jenkins job -xyz
+    
+
+
+
+  
