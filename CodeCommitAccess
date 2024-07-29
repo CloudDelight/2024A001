@@ -1,0 +1,8 @@
+code commit - git for aws
+
+code commit repo - defualt - private repo
+
+repositories - created 
+
+IAM - User - Generate https git credetials for codecommit - username and password
+when git clone use the this credentials
