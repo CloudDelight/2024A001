@@ -1,0 +1,13 @@
+Security
+
+1. AWS Config
+
+Check for all the running resources in your account - region
+It will check for the active rules that are craeted - customization
+then it will periodically monitor for compliance status
+once non conpliance is detected - it will check whether there are remediation defined
+if remidiation is defined - it will take action accordingly
+
+FinOps - Concentrate the cost - costlier
+
+Look for third party tools/ Open source - Prowler
