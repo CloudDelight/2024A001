@@ -1,0 +1,123 @@
+On premises to AWS Cloud Migration
+
+Phases of migration
+
+1. Prepare
+Connectivity establishment between on prem and cloud
+Discovery - On prem 
+
+data
+
+50 applications - 200 servers - webserver, application, DB - Linux
+Some servers are absolete - Older version RHEL 6.*
+DB servers are running with Oracle
+Storage of 500TB - Some data is not required need to identify
+Networking aspect
+
+Step 1 . Discovery - Application Discovery service (ADS) - Install this agent on all your On prem servers
+
+Ansible - configuration management tool - install agent at once on all servers
+ond linux server - install ansible - craete host file - include all IP addresses and then run ansible command
+1. Port shud be open for each IPs
+2. Whether same subnet
+3. Same VPC - check for sg
+4. Seperate VPC - VPN tunnel
+
+Step 2. ADs will collect all the data from servers
+CPU cores 
+memory allocated
+Suggest for instance types on aws
+
+Step 3. Check for vversions 
+Ansible - chekc for versions 
+seggregate where older versions are there 
+200 servers - 150 servers are latest version - support
+50 servers older servers
+
+Step 4. DB Srevers
+need to get data on licensing 
+how long is the validity
+
+Step 5. Storage analysis
+On which storage type have thier data - example-Optap
+Data analysis
+
+step 6. Initially checked the connectivity 
+if its not established 
+
+
+
+2. Plan
+
+Steps: 
+Plan for actual instance types that needs to be chosen
+Licensing - make sure dedicated host , reserved, on demand
+Vesions - 
+150 servers are fine - Lift and shift - rehosting
+50 srevers are old  - RHEL 6.* - Replatform
+Storage - EFS
+
+50 Applications
+
+Grouping of applications
+
+On AWS Side - You need start craeteing the Basic infrastructure
+
+Landing zone
+  application1 
+    Prod, 
+    dev, 
+    stage , 
+    qa
+
+
+Wave based applications
+
+Wave 1 - 3 applications - 50 servers
+
+
+
+3. Migrate
+
+Initiate the migration 
+configurations - tool - will launch all the instance on aws using config - VPC, Subnet, Instance type
+
+Cut over - 
+App1 - www.xyz.com --> onpremises - deleted
+map the traffic to AWS servers
+
+rehosting/replatform
+
+migrate/Modernisation
+
+
+4. Operate Optimize
+
+Monitoring , supprt
+
+
+
+
+
+
+Connectivity between On premises and cloud
+
+VPC in AWS - all the resources
+
+On premises - servers
+
+1. Site to site VPN - Operates over internet and speed depends on your ISP - 
+immediately establish from console - Max 1GBPs
+
+1. VPC - Virtual private Gateway
+customer (onprem side) - customer gateway
+
+VPN - map Vgw and CGW
+
+onprem to cloud flow
+
+server in onprem initiates - reach the customer gateway - cgw route to vgw -- traffic reaches vgw - vgw will have routes
+to particulat vpc
+
+2. Direct Connect - Dedicated channel netwoprk for on prem to AWS - you need to raise a support ticket - 
+option to slecet the spped
