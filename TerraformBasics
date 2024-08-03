@@ -67,6 +67,28 @@ module "aws_instance" "web" {
   instance_type = "t2.micro"
 }
 
+VPC creations
+1. Need to decide CIDR - classless inter domain range - 192.168.0.0/24 and create VPC
+2. Decide CIDR individual subnets
+3. Create private and public Subnets
+4. Internet gateway and attach to VPC
+5. Create route tavbles - private and public
+6. Public route table u need add a route 0.0.0.0/0 to igw
+7. Private route table - subnet assocciation - private subnet same as public
+
+Pre requisites
+1. aws configure
+2. Using IAM user - admin access
+3. Visual studio ccode
+
+
+Ec2 instance creation
+1. Key pair
+2. Instance type
+
+
+
+
 variables.tf
 
 instance_ami = "MIBKJSKJS"
